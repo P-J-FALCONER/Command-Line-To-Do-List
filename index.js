@@ -1,23 +1,25 @@
 #!/usr/bin/env node
 var program = require('commander')
 var package = require('./package.json')
-var chalk = require('chalk') //need to force color 
+var colors = require('colors'); 
 var data = require('prettiest')();
 
 function showFunction(list = false) {
+  var color_counter = 0
   if (data.hasOwnProperty(list)) {
     var results = data[list]
-    console.log("**"+list)
+    console.log(list.red.underline)
     for (var i = 0; i < results.length; i++) {
-      console.log('\t', results[i])
+      console.log('\t', results[i].bgRed)
     }
   }else{
     for (var key in data) {
       var results = data[key]
-      console.log("**"+key)
+      console.log(key.red.underline)
       for (var i = 0; i < results.length; i++) {
-        console.log('\t', results[i])
+        console.log('\t', results[i].bgRed)
       }
+      color_counter++ 
     }
   }
   
