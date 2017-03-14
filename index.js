@@ -23,10 +23,6 @@ function showFunction(list = false) {
   
 }
 
-function editFunction(){
-
-}
-
 function createFunction(list, item){
   if (data.hasOwnProperty(list) && item) {
     data[list].push(item)
@@ -35,6 +31,10 @@ function createFunction(list, item){
     data[list] = []
     showFunction(list)
   }
+}
+
+function editFunction(){
+
 }
 
 function deleteFunction(){
