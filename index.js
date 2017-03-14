@@ -2,30 +2,19 @@
 var program = require('commander')
 var package = require('./package.json')
 var chalk = require('chalk') //need to force color 
-
-// Standard Lists Template
-var To_Do_Lists = {
-  "Personal":['test', 'test'],
-  "Work":['test', 'test'],
-  "Random":['test', 'test']
-}
-var Completed = {
-  "Personal":['test', 'test'],
-  "Work":['test', 'test'],
-  "Random":['test', 'test']
-}
+var data = require('prettiest')();
 
 function showFunction(list = false) {
-  if (To_Do_Lists.hasOwnProperty(list)) {
-    var results = To_Do_Lists[list]
-    console.log(list)
+  if (data.hasOwnProperty(list)) {
+    var results = data[list]
+    console.log("**"+list)
     for (var i = 0; i < results.length; i++) {
       console.log('\t', results[i])
     }
   }else{
-    for (var key in To_Do_Lists) {
-      var results = To_Do_Lists[key]
-      console.log(key)
+    for (var key in data) {
+      var results = data[key]
+      console.log("**"+key)
       for (var i = 0; i < results.length; i++) {
         console.log('\t', results[i])
       }
@@ -38,13 +27,13 @@ function editFunction(){
 
 }
 
-function createFunction(list){
-  if (To_Do_Lists.hasOwnProperty(list, item) && item) {
-    To_Do_Lists[list].push(item)
+function createFunction(list, item){
+  if (data.hasOwnProperty(list) && item) {
+    data[list].push(item)
     showFunction(list);
-  }else{
-    console.log('Please Enter List and New Item as Arguments')
-    console.log('e.g. create Personal Pay')
+  }else if (list){
+    data[list] = []
+    showFunction(list)
   }
 }
 
@@ -59,7 +48,7 @@ program //show
   .action(showFunction)
 
 program // create
-  .command('create <list> <item>')
+  .command('create <list> [item]')
   .description('Allows you to create an Item on a todo list')
   .action(createFunction)
 
