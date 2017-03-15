@@ -1,7 +1,7 @@
 # Command Line To-Do List
 ---
 ## Description
-### A command line tool that allows you to create a To-Do lists. Built using Node.js.
+### A command line tool that allows you to create a To-Do lists. Built using Node.js and Commander a command-line framework.
 ---
 ## Author
   * <a href="https://github.com/P-J-FALCONER">Patrick Falconer</a>
@@ -21,48 +21,42 @@
  ```
 ### Show All Lists
  ```
- todo show 
- todo -s 
+ td show 
  ```
 ### Show Specific List
  ```
- todo show list_name
- todo -s list_name
+ td show list_name
  ```
 ### Create List
  ```
- todo create list_name
- todo -c list_name
+ td create list_name
  ```
 ### Create Item in List
  ```
- todo create existing_list item
- todo -c existing_list item
+ td create existing_list item
  ```
 ### Delete All Lists
  ```
- todo delete
- todo -d
+ td delete
  ```
 ### Delete List
  ```
- todo delete list_name
- todo -d list_name
+ td delete list_name
  ```
 ### Delete Item in List
  ```
- todo delete listname itemname
- todo -d list_name item_name
+ td delete listname itemname
  ```
  ---
 ## Change-Log
-### Version 0.0.1
- * Lists names are displayed in red while list items are displayed with red background.
- * Fully funtioning
+### Version 1.0.0
+ * Lists names are displayed in magenta while list items are displayed with magenta background.
+ * Create, Delete, Show Functions
 ---
 ## Future Changes
  * Different color for each list
  * Create due dates and change color based on date
  * allow for easy create and deleting of items
  * allow to create items and list names longer than one word with spaces
+ * add tab completeion using tabtab
  
