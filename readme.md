@@ -45,18 +45,22 @@
  ```
 ### Delete Item in List
  ```
- td delete listname itemname
+ td delete list_name item_name
  ```
  ---
 ## Change-Log
-### Version 1.0.0
+### Version 1.0.1
  * Lists names are displayed in magenta while list items are displayed with magenta background.
  * Create, Delete, Show Functions
+### Version 1.0.2
+ * Fix issue with permissions on global install
+ * tab completion on list name and items
+ * created at time and due date
 ---
 ## Future Changes
  * Different color for each list
  * Create due dates and change color based on date
- * allow for easy create and deleting of items
  * allow to create items and list names longer than one word with spaces
  * add tab completeion using tabtab
+ * fix issue with sudo for global install
  
