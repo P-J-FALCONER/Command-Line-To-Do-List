@@ -1,4 +1,5 @@
 # Command Line To-Do List
+![alt text](https://github.com/P-J-FALCONER/CLI_To-Do_List/blob/master/To-Do.gif "Logo Gif")
 ---
 ## Description
 ### A command line tool that allows you to create a To-Do lists. Built using Node.js and Commander a command-line framework.
@@ -63,5 +64,6 @@
  * Create due dates and change color based on date
  * allow to create items and list names longer than one word with spaces
  * add tab completeion using tabtab
- * fix issue with sudo for global install
+ * add gif for each command
+ * create logo
  
