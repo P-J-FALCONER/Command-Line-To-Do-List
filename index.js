@@ -3,31 +3,29 @@ var program = require('commander')
 var package = require('./package.json')
 var colors = require('colors'); 
 var data = require('prettiest')();
- 
+
 
 function showFunction(list = false) {
-  var color_counter = 0
   if (data.hasOwnProperty(list)) {
     var results = data[list]
     console.log(list.magenta.underline)
     for (var i = 0; i < results.length; i++) {
-      console.log('\t', results[i].bgMagenta)
+      console.log('\t', results[i]['item'].bgMagenta+"("+results[i]['created_at']+")")
     }
   }else{
     for (var key in data) {
       var results = data[key]
       console.log(key.magenta.underline)
       for (var i = 0; i < results.length; i++) {
-        console.log('\t', results[i].bgMagenta)
+        console.log('\t', results[i]['item'].bgMagenta+"("+results[i]['created_at']+")")
       }
-      color_counter++ 
     }
   }
 }
 
 function createFunction(list, item){
   if (data.hasOwnProperty(list) && item) {
-    data[list].push(item);
+    data[list].push({item:item, created_at:Date()});
     showFunction();
   }else if (list){
     data[list] = []
