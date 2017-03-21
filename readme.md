@@ -15,7 +15,7 @@
   ```
 ---
 ## How To Use
-#### In some cases you may need to edit your computers permissions to use these commands without sudo please refer to NPM <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">directions</a> on how to do so 
+#### In some cases you may need to edit your computers permissions to use these commands without sudo, please refer to NPM <a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">directions</a> on how to do so 
 
 ### Install
  ```
