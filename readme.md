@@ -19,7 +19,7 @@
 
 ### Install
  ```
- npm install (NPM Name) -g
+ npm install To-Do-List -g
  ```
 ### Show All Lists
  ```
@@ -27,15 +27,15 @@
  ```
 ### Show Specific List
  ```
- td show list_name
+ td show "List Name"
  ```
 ### Create List
  ```
- td create list_name
+ td create "List Name"
  ```
 ### Create Item in List
  ```
- td create existing_list item
+ td create "Existing List" "New Item"
  ```
 ### Delete All Lists
  ```
@@ -43,27 +43,23 @@
  ```
 ### Delete List
  ```
- td delete list_name
+ td delete "List Name"
  ```
 ### Delete Item in List
  ```
- td delete list_name item_name
+ td delete "List Name" "Item Name"
  ```
  ---
 ## Change-Log
-### Version 1.0.1
+### Version 1.0.2
  * Lists names are displayed in magenta while list items are displayed with magenta background.
  * Create, Delete, Show Functions
-### Version 1.0.2
- * Fix issue with permissions on global install
- * tab completion on list name and items
- * created at time and due date
+### Version 1.0.3
+ * 
+
 ---
 ## Future Changes
- * Different color for each list
  * Create due dates and change color based on date
- * allow to create items and list names longer than one word with spaces
- * add tab completeion using tabtab
  * add gif for each command
- * create logo
- 
+ * tab completion on list name and items
+ * created at time and due date

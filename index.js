@@ -3,6 +3,7 @@ var program = require('commander')
 var package = require('./package.json')
 var colors = require('colors'); 
 var data = require('prettiest')();
+ 
 
 function showFunction(list = false) {
   var color_counter = 0
@@ -26,11 +27,11 @@ function showFunction(list = false) {
 
 function createFunction(list, item){
   if (data.hasOwnProperty(list) && item) {
-    data[list].push(item)
-    showFunction(list);
+    data[list].push(item);
+    showFunction();
   }else if (list){
     data[list] = []
-    showFunction(list)
+    showFunction();
   }
 }
 
