@@ -35,17 +35,27 @@ function createFunction(list, item){
 
 function deleteFunction(list=false, item){
   if(!list){
-    data = {}
-    console.log("REMOVED ALL TO-DO LISTS".red.bold)
+    console.log("NEED TO ENTER A LIST NAME".red.bold)
   }
   else if (data.hasOwnProperty(list) && !item){
     delete data[list];
     console.log("REMOVED ".red.bold+list.red.bold+" FROM TO-DO LISTS".red.bold)
   }
-  else if (data.hasOwnProperty(list) && data[list].includes(item)){
-    var delete_index = data[list].indexOf(item)
-    data[list].splice(delete_index, 1);
-    console.log("REMOVED ".red.bold.underline+item.red.bold+" from ".red.bold+list.red.bold+" List".red.bold)
+  else if (data.hasOwnProperty(list)){
+    var delete_index
+    for (var index = 0; index < data[list].length; index++) {
+      if (data[list][index].item == item){
+        delete_index = index;
+      }
+    }
+    console.log(delete_index)
+    if (delete_index || delete_index == 0){
+      data[list].splice(delete_index, 1);
+      console.log("REMOVED ".red.bold.underline+item.red.bold+" from ".red.bold+list.red.bold+" List".red.bold)
+    }else{
+      console.log('INCORRECT ITEM OR LIST PLEASE RETRY AND CHECK'.red.bold)
+    }
+    
   }else{
     console.log('INCORRECT ITEM OR LIST PLEASE RETRY AND CHECK SPELLING'.red.bold)
   }

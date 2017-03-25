@@ -55,12 +55,14 @@
  * Lists names are displayed in magenta while list items are displayed with magenta background.
  * Create, Delete, Show Functions
 ### Version 1.0.3
- * added created at date to items
+ * added created_at date to items
+---
+### Version 1.0.4
+  * Fixed deletion bug
 ---
 ## Future Changes
  * Change color based on due date
  * add gif for each command
  * add option for adding item to list
  * add option to delete item from list
- * dont have delete delete all lists
  * add option to enter due date
