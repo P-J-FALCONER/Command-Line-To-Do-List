@@ -54,6 +54,7 @@
 ### Version 1.0.2
  * Lists names are displayed in magenta while list items are displayed with magenta background.
  * Create, Delete, Show Functions
+---
 ### Version 1.0.3
  * added created_at date to items
 ---
@@ -66,3 +67,4 @@
  * add option for adding item to list
  * add option to delete item from list
  * add option to enter due date
+ * edit time format
