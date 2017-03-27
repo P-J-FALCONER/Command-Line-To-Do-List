@@ -61,10 +61,14 @@
 ### Version 1.0.4
   * Fixed deletion bug
 ---
+### Version 1.0.5
+  * Clear screen on show function
+  * Date Formatted for month/day/year for created at
+  * 
+---
 ## Future Changes
  * Change color based on due date
- * add gif for each command
+ * add gif for each command on readme
  * add option for adding item to list
  * add option to delete item from list
  * add option to enter due date
- * edit time format

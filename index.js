@@ -3,21 +3,24 @@ var program = require('commander')
 var package = require('./package.json')
 var colors = require('colors'); 
 var data = require('prettiest')();
+var clear = require('clear')
 
 
 function showFunction(list = false) {
   if (data.hasOwnProperty(list)) {
+    clear();
     var results = data[list]
     console.log(list.magenta.underline)
     for (var i = 0; i < results.length; i++) {
-      console.log('\t', results[i]['item'].bgMagenta+"("+results[i]['created_at']+")")
+      console.log('\t', results[i]['item'].bgMagenta+" ("+results[i]['created_at']+")")
     }
   }else{
+    clear();
     for (var key in data) {
       var results = data[key]
       console.log(key.magenta.underline)
       for (var i = 0; i < results.length; i++) {
-        console.log('\t', results[i]['item'].bgMagenta+"("+results[i]['created_at']+")")
+        console.log('\t', results[i]['item'].bgMagenta+" (Created: "+results[i]['created_at']+")")
       }
     }
   }
@@ -25,7 +28,18 @@ function showFunction(list = false) {
 
 function createFunction(list, item){
   if (data.hasOwnProperty(list) && item) {
-    data[list].push({item:item, created_at:Date()});
+    var created_datetime = new Date()
+    var dd = created_datetime.getDate();
+    var mm = created_datetime.getMonth()+1;
+    var yyyy = created_datetime.getFullYear();
+    if(dd<10){
+        dd='0'+dd;
+    } 
+    if(mm<10){
+        mm='0'+mm;
+    } 
+    var created_datetime = mm+'/'+dd+'/'+yyyy;
+    data[list].push({item:item, created_at:created_datetime});
     showFunction();
   }else if (list){
     data[list] = []
