@@ -12,7 +12,11 @@ function showFunction(list = false) {
     var results = data[list]
     console.log(list.magenta.underline)
     for (var i = 0; i < results.length; i++) {
-      console.log('\t', results[i]['item'].bgMagenta+" ("+results[i]['created_at']+")")
+      if (true){
+        console.log('\t', results[i]['item'].bgMagenta+" ("+results[i]['created_at'].red.bold+")")
+      }else{
+        console.log('\t', results[i]['item'].bgMagenta+" ("+results[i]['created_at']+")")
+      }
     }
   }else{
     clear();
@@ -20,7 +24,11 @@ function showFunction(list = false) {
       var results = data[key]
       console.log(key.magenta.underline)
       for (var i = 0; i < results.length; i++) {
-        console.log('\t', results[i]['item'].bgMagenta+" (Created: "+results[i]['created_at']+")")
+        if (true){
+          console.log('\t', results[i]['item'].bgMagenta+" ("+results[i]['created_at'].red.bold+")")
+        }else{
+          console.log('\t', results[i]['item'].bgMagenta+" ("+results[i]['created_at']+")")
+        }
       }
     }
   }
