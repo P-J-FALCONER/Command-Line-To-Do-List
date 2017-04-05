@@ -60,7 +60,6 @@ function deleteFunction(list=false, item){
         delete_index = index;
       }
     }
-    console.log(delete_index)
     if (delete_index || delete_index == 0){
       data[list].splice(delete_index, 1);
       console.log("REMOVED ".red.bold.underline+item.red.bold+" from ".red.bold+list.red.bold+" List".red.bold)
