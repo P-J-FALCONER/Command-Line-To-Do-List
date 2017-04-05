@@ -12,7 +12,7 @@ function showFunction(list = false) {
     var results = data[list]
     console.log(list.magenta.underline)
     for (var i = 0; i < results.length; i++) {
-      if (true){
+      if (results[i]['created_at'].getMonth){
         console.log('\t', results[i]['item'].bgMagenta+" ("+results[i]['created_at'].red.bold+")")
       }else{
         console.log('\t', results[i]['item'].bgMagenta+" ("+results[i]['created_at']+")")
@@ -24,7 +24,7 @@ function showFunction(list = false) {
       var results = data[key]
       console.log(key.magenta.underline)
       for (var i = 0; i < results.length; i++) {
-        if (true){
+        if (results[i]['created_at'].getMonth){
           console.log('\t', results[i]['item'].bgMagenta+" ("+results[i]['created_at'].red.bold+")")
         }else{
           console.log('\t', results[i]['item'].bgMagenta+" ("+results[i]['created_at']+")")
@@ -36,17 +36,7 @@ function showFunction(list = false) {
 
 function createFunction(list, item){
   if (data.hasOwnProperty(list) && item) {
-    var created_datetime = new Date()
-    var dd = created_datetime.getDate();
-    var mm = created_datetime.getMonth()+1;
-    var yyyy = created_datetime.getFullYear();
-    if(dd<10){
-        dd='0'+dd;
-    } 
-    if(mm<10){
-        mm='0'+mm;
-    } 
-    var created_datetime = mm+'/'+dd+'/'+yyyy;
+    var created_datetime = Date()
     data[list].push({item:item, created_at:created_datetime});
     showFunction();
   }else if (list){

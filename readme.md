@@ -67,8 +67,4 @@
   * 
 ---
 ## Future Changes
- * Change color based on due date
  * add gif for each command on readme
- * add option for adding item to list
- * add option to delete item from list
- * add option to enter due date
