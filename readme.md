@@ -1,5 +1,5 @@
 # Command Line To-Do List
-![alt text](https://github.com/P-J-FALCONER/CLI_To-Do_List/blob/master/To-Do.gif "Logo Gif")
+![To-Do-List Logo](https://github.com/P-J-FALCONER/CLI_To-Do_List/blob/master/To-Do.gif "Logo Gif")
 ---
 ## Description
 ### A command line tool that allows you to create a To-Do lists. Built using Node.js and Commander a command-line framework.
@@ -63,8 +63,4 @@
 ---
 ### Version 1.0.5
   * Clear screen on show function
-  * Date Formatted for month/day/year for created at
-  * 
 ---
-## Future Changes
- * add gif for each command on readme
