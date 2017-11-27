@@ -64,3 +64,10 @@
 ### Version 1.0.5
   * Clear screen on show function
 ---
+### Version 1.0.7
+  * Cleaned up help 
+  * Cleaned up styling
+  * Check on Empty To-Do List
+  * Edited Coloring of output
+  * added Unicode symbols
+---

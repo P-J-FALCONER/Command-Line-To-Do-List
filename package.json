@@ -1,6 +1,6 @@
 {
   "name": "to-do-list",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "command line to-do list",
   "main": "./index.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "complete": "^0.4.4",
+    "figlet": "^1.2.0",
     "prettiest": "^1.0.0"
   },
   "bin": {
